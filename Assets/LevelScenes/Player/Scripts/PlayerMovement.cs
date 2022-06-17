@@ -9,11 +9,13 @@ public class PlayerMovement : MonoBehaviour
 {
     private float canSwipeRadius = 3000f;
     private float speed;
+    private float rotationSpeed;
     private RaycastManager _raycastManager;
     
     private void Awake()
     {
         speed = PlayerController.Instance.playerMovementSpeed;
+        rotationSpeed = PlayerController.Instance.playerRotationSpeed;
         _raycastManager = GetComponent<RaycastManager>();
     }
 
@@ -31,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var fingers = LeanTouch.Fingers;
 
-         if (fingers.Count> 0)
+         if (fingers.Count > 0)
          { 
              if (fingers[0].Down)
              {
@@ -99,15 +101,26 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
     }
+
+    private Vector3 wallHitPoint;
+    
+    private void RotatePlayer()
+    {
+        var targetRotation = Quaternion.LookRotation(wallHitPoint - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
+    }
     
     private void GoToRaycastHit()
     {
-        var wallHitPoint = _raycastManager.rayHitPoint;
+        wallHitPoint = _raycastManager.rayHitPoint;
         var endPosition = new Vector3(wallHitPoint.x, transform.position.y, wallHitPoint.z);
         var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) / speed;
+        RotatePlayer();
         transform.DOMove(endPosition,moveDuration).OnComplete((() =>
         {
             PlayerController.Instance.canSwipe = true;
         }));
     }
+
+  
 }

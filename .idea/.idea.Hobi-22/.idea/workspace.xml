@@ -23,17 +23,19 @@
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../RealPlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Player/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
+      <option value="$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPath.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
-      <option value="$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Player.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPath.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2Ai8ToYaasJtZBBQhDlCftovNkD" />
@@ -78,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655481058955</updated>
-      <workItem from="1655481073055" duration="6169000" />
+      <workItem from="1655481073055" duration="9328000" />
     </task>
     <servers />
   </component>

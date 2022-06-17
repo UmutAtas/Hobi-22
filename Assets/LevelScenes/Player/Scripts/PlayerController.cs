@@ -7,6 +7,7 @@ public class PlayerController : Singleton<PlayerController>
 {
    [NonSerialized] public bool canSwipe;
    public float playerMovementSpeed;
+   public float playerRotationSpeed;
    
    private Vector3 rayDirection;
    private PlayerMovement _playerMovement;
