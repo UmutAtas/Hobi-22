@@ -12,19 +12,28 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../RealPlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../RealPlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Character.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/CollisionTriggers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Stack/Assets/LevelScenes/Stack/Stack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/WallLocater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../RealPlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Player/Scripts/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
+      <option value="$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPath.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2Ai8ToYaasJtZBBQhDlCftovNkD" />
@@ -69,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655481058955</updated>
-      <workItem from="1655481073055" duration="4426000" />
+      <workItem from="1655481073055" duration="6169000" />
     </task>
     <servers />
   </component>
