@@ -7,9 +7,16 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [NonSerialized] public Vector3 rayDirection;
     private float canSwipeRadius = 3000f;
+    private float speed;
+    private RaycastManager _raycastManager;
     
+    private void Awake()
+    {
+        speed = PlayerController.Instance.playerMovementSpeed;
+        _raycastManager = GetComponent<RaycastManager>();
+    }
+
     public enum SwipeDirection
     {
         right,
@@ -19,30 +26,8 @@ public class PlayerMovement : MonoBehaviour
     }
     
     public SwipeDirection currentDirection;
-    
-    public void CurrentSwipe()
-    {
-        switch (currentDirection)
-        {
-            case SwipeDirection.right:
-                rayDirection = Vector3.right;
-                break;
-            
-            case SwipeDirection.left:
-                rayDirection = Vector3.left;
-                break;
-            
-            case SwipeDirection.forward:
-                rayDirection = Vector3.forward;
-                break;
-            
-            case SwipeDirection.backward:
-                rayDirection = Vector3.back;
-                break;
-        }
-    }
-    
-    private void MovePlayer()
+
+    public void MovePlayer()
     {
         var fingers = LeanTouch.Fingers;
 
@@ -50,15 +35,14 @@ public class PlayerMovement : MonoBehaviour
          { 
              if (fingers[0].Down)
              {
-                    
+                 
              }
              else if (fingers[0].Set)
-             { 
+             {
                  if (!PlayerController.Instance.canSwipe || fingers[0].SwipeScreenDelta.sqrMagnitude < canSwipeRadius)
                  {
                      return;
                  }
-                
                  if (fingers[0].SwipeScreenDelta.x > 0 && Mathf.Abs(fingers[0].SwipeScreenDelta.x) 
                      > Mathf.Abs(fingers[0].SwipeScreenDelta.y))
                  {
@@ -84,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
                      PlayerController.Instance.canSwipe = false;
                  }
                  CurrentSwipe();
-               
+                 _raycastManager.RayCaster();
                  GoToRaycastHit();
              }
              else if (fingers[0].Up)
@@ -94,20 +78,36 @@ public class PlayerMovement : MonoBehaviour
          }
     }
     
+    private void CurrentSwipe()
+    {
+        switch (currentDirection)
+        {
+            case SwipeDirection.right:
+                PlayerController.Instance.RayDirection = Vector3.right;
+                break;
+            
+            case SwipeDirection.left:
+                PlayerController.Instance.RayDirection = Vector3.left;
+                break;
+            
+            case SwipeDirection.forward:
+                PlayerController.Instance.RayDirection = Vector3.forward;
+                break;
+            
+            case SwipeDirection.backward:
+                PlayerController.Instance.RayDirection = Vector3.back;
+                break;
+        }
+    }
+    
     private void GoToRaycastHit()
     {
-        var wallHitPoint = _wallLocater.rayHitPoint;
-        var endPosition = new Vector3(wallHitPoint.x, playerTransformHeight, wallHitPoint.z);
-        var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) * pTransformMoveSpeed;
-        transform.DOMove(endPosition,moveDuration).SetEase(moveEase).OnComplete((() =>
+        var wallHitPoint = _raycastManager.rayHitPoint;
+        var endPosition = new Vector3(wallHitPoint.x, transform.position.y, wallHitPoint.z);
+        var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) / speed;
+        transform.DOMove(endPosition,moveDuration).OnComplete((() =>
         {
-            //InputManager.I.canSwipe = true;
-            canSwipe = true;
-            //SoundManager.I.PlayOne("Test1");
-            CameraShaker.Instance.ShakeOnce(camShakeMagnitude,camShakeRoughness,camShakeFadeIn,camShakeFadeout);
-            LevelTilt.Instance.TiltRecovery();
+            PlayerController.Instance.canSwipe = true;
         }));
-        var endRotation = Vector3.up * rotateSpeed;
-        transform.DORotate(endRotation, moveDuration, RotateMode.FastBeyond360);
     }
 }
