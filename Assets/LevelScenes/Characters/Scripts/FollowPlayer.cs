@@ -5,28 +5,26 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField] private float followOffsetZ;
     [SerializeField] private float followSpeed;
-
-    private void Update()
+    [SerializeField] private float followOffset;
+    [SerializeField] private float rotationSpeed;
+    private Quaternion targetRotation;
+    private float distance;
+    
+    private void LateUpdate()
     {
         PlayerFollow();
     }
 
     private void PlayerFollow()
     {
-        if (PlayerController.Instance.transform.eulerAngles.y > 170)
+        var playerPos = PlayerController.Instance.transform.position;
+        targetRotation = Quaternion.LookRotation(playerPos - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        distance = Vector3.Distance(transform.position, playerPos);
+        if (distance > followOffset)
         {
-            followOffsetZ = 0.85f;
+            transform.position = Vector3.LerpUnclamped(transform.position, playerPos, followSpeed * Time.deltaTime);     
         }
-        else
-        {
-            followOffsetZ = -0.85f;
-        }
-        transform.position = Vector3.Lerp(transform.position,
-            PlayerController.Instance.transform.position + (Vector3.forward * followOffsetZ),
-            followSpeed * Time.deltaTime);
-        transform.LookAt(PlayerController.Instance.transform);
-        print(followOffsetZ);
     }
 }
