@@ -32,11 +32,12 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
       <option value="$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPath.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayerRotation.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2Ai8ToYaasJtZBBQhDlCftovNkD" />
@@ -82,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655481058955</updated>
       <workItem from="1655481073055" duration="9427000" />
-      <workItem from="1655560944636" duration="2635000" />
+      <workItem from="1655560944636" duration="7779000" />
     </task>
     <servers />
   </component>
