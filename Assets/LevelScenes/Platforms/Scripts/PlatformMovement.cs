@@ -12,7 +12,7 @@ public class PlatformMovement : MonoBehaviour
 
     public void MovePlatform()
     {
-        DOTween.Sequence().Append(transform.DOMoveY(position * rebounceFactor, duration / 2).SetEase(Ease.InQuad))
+        DOTween.Sequence().Append(transform.DOMoveY(position + rebounceFactor, duration / 2).SetEase(Ease.InQuad))
             .Append(transform.DOMoveY(position, duration / 2).SetEase(Ease.InSine));
         gameObject.layer = 7;
     }
