@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 wallHitPoint;
     
-    private void RotatePlayer()
+    public void RotatePlayer()
     {
         var targetRotation = Quaternion.LookRotation(wallHitPoint - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
@@ -115,7 +115,6 @@ public class PlayerMovement : MonoBehaviour
         wallHitPoint = _raycastManager.rayHitPoint;
         var endPosition = new Vector3(wallHitPoint.x, transform.position.y, wallHitPoint.z);
         var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) / speed;
-        RotatePlayer();
         transform.DOMove(endPosition,moveDuration).OnComplete((() =>
         {
             PlayerController.Instance.canSwipe = true;

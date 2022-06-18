@@ -27,5 +27,6 @@ public class PlayerController : Singleton<PlayerController>
    private void FixedUpdate()
    {
        _playerMovement.MovePlayer();
+       _playerMovement.RotatePlayer();
    }
 }
