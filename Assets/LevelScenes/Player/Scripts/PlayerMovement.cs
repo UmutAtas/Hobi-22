@@ -103,16 +103,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private Vector3 wallHitPoint;
+    private Quaternion targetRotation;
     
     public void RotatePlayer()
     {
-        var targetRotation = Quaternion.LookRotation(wallHitPoint - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
     }
     
     private void GoToRaycastHit()
     {
         wallHitPoint = _raycastManager.rayHitPoint;
+        targetRotation = Quaternion.LookRotation(wallHitPoint - transform.position);
         var endPosition = new Vector3(wallHitPoint.x, transform.position.y, wallHitPoint.z);
         var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) / speed;
         transform.DOMove(endPosition,moveDuration).OnComplete((() =>
