@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -13,5 +14,6 @@ public class PlatformMovement : MonoBehaviour
     {
         DOTween.Sequence().Append(transform.DOMoveY(position * rebounceFactor, duration / 2).SetEase(Ease.InQuad))
             .Append(transform.DOMoveY(position, duration / 2).SetEase(Ease.InSine));
+        gameObject.layer = 7;
     }
 }
