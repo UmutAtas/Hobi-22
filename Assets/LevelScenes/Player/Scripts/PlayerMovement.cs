@@ -121,12 +121,12 @@ public class PlayerMovement : MonoBehaviour
         targetRotation = Quaternion.LookRotation(wallHitPoint - transform.position);
         var endPosition = new Vector3(wallHitPoint.x, transform.position.y, wallHitPoint.z);
         var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) / speed;
-        transform.DOMove(endPosition,moveDuration).OnComplete((() =>
+        transform.DOMove(endPosition,moveDuration).OnComplete(() =>
         {
             playerAnimator.SetBool("CanWalk" , false);
             PlayerController.Instance.canSwipe = true;
             DOVirtual.DelayedCall(2f, OpenPlatformEdges);
-        }));
+        });
     }
 
     private void OpenPlatformEdges()
