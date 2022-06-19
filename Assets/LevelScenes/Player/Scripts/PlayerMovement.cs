@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float rotationSpeed;
     private RaycastManager _raycastManager;
     private Animator playerAnimator;
-    private GameManager[] platformEdges;
+    private GameObject[] platformEdges;
 
     private void Awake()
     {
@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
         rotationSpeed = PlayerController.Instance.playerRotationSpeed;
         _raycastManager = GetComponent<RaycastManager>();
         playerAnimator = PlayerController.Instance.anim;
+        platformEdges = PlayerController.Instance.platformEdges;
     }
 
     public enum SwipeDirection
@@ -124,7 +125,16 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("CanWalk" , false);
             PlayerController.Instance.canSwipe = true;
+            DOVirtual.DelayedCall(2f, OpenPlatformEdges);
         }));
+    }
+
+    private void OpenPlatformEdges()
+    {
+        foreach (var platform in platformEdges)
+        {
+            platform.SetActive(true);
+        }
     }
 
   
