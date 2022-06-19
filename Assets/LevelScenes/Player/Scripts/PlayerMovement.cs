@@ -11,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     private float rotationSpeed;
     private RaycastManager _raycastManager;
+    private Animator playerAnimator;
     
     private void Awake()
     {
         speed = PlayerController.Instance.playerMovementSpeed;
         rotationSpeed = PlayerController.Instance.playerRotationSpeed;
         _raycastManager = GetComponent<RaycastManager>();
+        playerAnimator = PlayerController.Instance.anim;
     }
 
     public enum SwipeDirection
@@ -112,12 +114,14 @@ public class PlayerMovement : MonoBehaviour
     
     private void GoToRaycastHit()
     {
+        playerAnimator.SetBool("CanWalk" , true);
         wallHitPoint = _raycastManager.rayHitPoint;
         targetRotation = Quaternion.LookRotation(wallHitPoint - transform.position);
         var endPosition = new Vector3(wallHitPoint.x, transform.position.y, wallHitPoint.z);
         var moveDuration =Vector3.Distance(transform.position ,wallHitPoint) / speed;
         transform.DOMove(endPosition,moveDuration).OnComplete((() =>
         {
+            playerAnimator.SetBool("CanWalk" , false);
             PlayerController.Instance.canSwipe = true;
         }));
     }

@@ -10,6 +10,10 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     private Quaternion targetRotation;
     private float distance;
+
+    [SerializeField] private Animator healerAnim;
+    [SerializeField] private Animator soldierAnim;
+    [SerializeField] private Animator witchAnim;
     
     private void LateUpdate()
     {
@@ -24,7 +28,16 @@ public class FollowPlayer : MonoBehaviour
         distance = Vector3.Distance(transform.position, playerPos);
         if (distance > followOffset)
         {
-            transform.position = Vector3.LerpUnclamped(transform.position, playerPos, followSpeed * Time.deltaTime);     
+            transform.position = Vector3.LerpUnclamped(transform.position, playerPos, followSpeed * Time.deltaTime); 
+            healerAnim.SetBool("CanWalk" , true);
+            soldierAnim.SetBool("CanWalk" , true);
+            witchAnim.SetBool("CanWalk" , true);
+        }
+        else
+        {
+            healerAnim.SetBool("CanWalk" , false);
+            soldierAnim.SetBool("CanWalk" , false);
+            witchAnim.SetBool("CanWalk" , false);
         }
     }
 }

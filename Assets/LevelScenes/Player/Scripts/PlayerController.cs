@@ -12,6 +12,8 @@ public class PlayerController : Singleton<PlayerController>
    private Vector3 rayDirection;
    private PlayerMovement _playerMovement;
 
+
+   public Animator anim;
    private void Awake()
    {
       _playerMovement = GetComponentInChildren<PlayerMovement>();
