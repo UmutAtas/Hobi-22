@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
     {
         foreach (var platform in platformEdges)
         {
-            platform.SetActive(true);
+            platform.layer = 8;
         }
     }
 
