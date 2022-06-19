@@ -14,6 +14,7 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] private Animator healerAnim;
     [SerializeField] private Animator soldierAnim;
     [SerializeField] private Animator witchAnim;
+    [SerializeField] private WarriorBehaviour _warriorBehaviour;
     
     private void LateUpdate()
     {
@@ -30,7 +31,10 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = Vector3.LerpUnclamped(transform.position, playerPos, followSpeed * Time.deltaTime); 
             healerAnim.SetBool("CanWalk" , true);
-            soldierAnim.SetBool("CanWalk" , true);
+            if (!_warriorBehaviour)
+            {
+                soldierAnim.SetBool("CanWalk" , true);
+            }
             witchAnim.SetBool("CanWalk" , true);
         }
         else
