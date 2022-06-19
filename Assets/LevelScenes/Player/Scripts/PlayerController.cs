@@ -14,12 +14,14 @@ public class PlayerController : Singleton<PlayerController>
 
 
    public Animator anim;
+
+   public GameObject[] platformEdges;
    private void Awake()
    {
       _playerMovement = GetComponentInChildren<PlayerMovement>();
       canSwipe = true;
    }
-
+   
    public Vector3 RayDirection
    {
       get => rayDirection;

@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private float rotationSpeed;
     private RaycastManager _raycastManager;
     private Animator playerAnimator;
-    
+    private GameManager[] platformEdges;
+
     private void Awake()
     {
         speed = PlayerController.Instance.playerMovementSpeed;

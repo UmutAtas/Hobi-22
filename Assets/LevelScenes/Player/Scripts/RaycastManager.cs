@@ -16,6 +16,7 @@ public class RaycastManager : MonoBehaviour
         {
             rayHitPoint = new Vector3(hit.point.x, transform.position.y, hit.point.z) -
                          ray * rayOffsetFactor;
+            hit.collider.gameObject.SetActive(false);
         }
     }
 }
