@@ -35,8 +35,8 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayerRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
@@ -84,7 +84,7 @@
       <updated>1655481058955</updated>
       <workItem from="1655481073055" duration="9427000" />
       <workItem from="1655560944636" duration="9987000" />
-      <workItem from="1655627329801" duration="3169000" />
+      <workItem from="1655627329801" duration="3785000" />
     </task>
     <servers />
   </component>
