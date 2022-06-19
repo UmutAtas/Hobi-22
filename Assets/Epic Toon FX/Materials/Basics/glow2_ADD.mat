@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: glow2_ADD
-  m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
-  m_ShaderKeywords: _FADING_ON _SOFTPARTICLES_ON
+  m_Shader: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHABLEND_ON _FADING_ON _SOFTPARTICLES_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -38,6 +38,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 410f2af71183e2c49baecd196e30fdec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 2
@@ -57,8 +61,10 @@ Material:
     - _EmissionEnabled: 0
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
+    - _Glossiness: 0.5
     - _InvFade: 3
-    - _LightingEnabled: 0
+    - _LightingEnabled: 1
+    - _Metallic: 0
     - _Mode: 4
     - _QueueOffset: 0
     - _SoftParticlesEnabled: 1
@@ -76,6 +82,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 2, b: 0, a: 0}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_BuildTextureStacks: []
 --- !u!114 &4421277695213425924
 MonoBehaviour:
   m_ObjectHideFlags: 11
