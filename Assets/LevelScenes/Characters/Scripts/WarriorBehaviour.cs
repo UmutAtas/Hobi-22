@@ -14,6 +14,7 @@ public class WarriorBehaviour : MonoBehaviour
     
     private void Protect()
     {
+        print("girdi");
         parent = true;
         transform.SetParent(null);
         soldierAnim.SetBool("CanWalk" , true);
