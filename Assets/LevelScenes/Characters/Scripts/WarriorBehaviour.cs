@@ -22,6 +22,7 @@ public class WarriorBehaviour : MonoBehaviour
         {
             soldierAnim.SetBool("CanWalk", false);
         });
+        transform.DORotate(new Vector3(0f, 90f, 0f), time);
     }
 
     private void OnTriggerEnter(Collider other)
