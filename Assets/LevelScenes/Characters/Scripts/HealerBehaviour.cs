@@ -8,6 +8,7 @@ public class HealerBehaviour : MonoBehaviour
     [SerializeField] private GameObject desiredPos;
     [SerializeField] private float time;
     [SerializeField] private Animator healerAnim;
+    [SerializeField] private GameObject wolfParticle;
     public bool parent = false;
     
     private void Protect()
@@ -20,6 +21,7 @@ public class HealerBehaviour : MonoBehaviour
             healerAnim.SetBool("CanWalk", false);
         });
         transform.DORotate(new Vector3(0f, 180, 0f), time);
+        wolfParticle.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

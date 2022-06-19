@@ -42,9 +42,9 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/WarriorBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/WitcherBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/FinalPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/HealerBehaviour.cs" />
     </changedPaths>
   </component>
