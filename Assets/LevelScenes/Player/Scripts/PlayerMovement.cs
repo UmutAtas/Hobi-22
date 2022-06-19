@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.SetBool("CanWalk" , false);
             PlayerController.Instance.canSwipe = true;
-            DOVirtual.DelayedCall(2f, OpenPlatformEdges);
+            DOVirtual.DelayedCall(1f, OpenPlatformEdges);
         });
     }
 
