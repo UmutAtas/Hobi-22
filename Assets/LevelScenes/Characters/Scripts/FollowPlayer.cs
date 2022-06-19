@@ -15,6 +15,8 @@ public class FollowPlayer : MonoBehaviour
     [SerializeField] private Animator soldierAnim;
     [SerializeField] private Animator witchAnim;
     [SerializeField] private WarriorBehaviour _warriorBehaviour;
+    [SerializeField] private WitcherBehaviour _witcherBehaviour; 
+    [SerializeField] private HealerBehaviour _healerBehaviour; 
     
     private void LateUpdate()
     {
@@ -29,13 +31,19 @@ public class FollowPlayer : MonoBehaviour
         distance = Vector3.Distance(transform.position, playerPos);
         if (distance > followOffset)
         {
-            transform.position = Vector3.LerpUnclamped(transform.position, playerPos, followSpeed * Time.deltaTime); 
-            healerAnim.SetBool("CanWalk" , true);
-            if (!_warriorBehaviour)
+            transform.position = Vector3.LerpUnclamped(transform.position, playerPos, followSpeed * Time.deltaTime);
+            if (!_healerBehaviour.parent)
+            {
+                healerAnim.SetBool("CanWalk" , true);    
+            }
+            if (!_warriorBehaviour.parent)
             {
                 soldierAnim.SetBool("CanWalk" , true);
             }
-            witchAnim.SetBool("CanWalk" , true);
+            if (!_witcherBehaviour.parent)
+            {
+                witchAnim.SetBool("CanWalk" , true);
+            }
         }
         else
         {

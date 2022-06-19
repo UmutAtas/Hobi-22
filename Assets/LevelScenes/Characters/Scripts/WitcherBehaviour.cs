@@ -2,33 +2,40 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
 
-public class WarriorBehaviour : MonoBehaviour
+public class WitcherBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject desiredPos;
+    [SerializeField] private Animator witchAnim;
     [SerializeField] private float time;
-    [SerializeField] private Animator soldierAnim;
     public bool parent = false;
+    [SerializeField] private GameObject portalEffect;
     
     private void Protect()
     {
         parent = true;
         transform.SetParent(null);
-        soldierAnim.SetBool("CanWalk" , true);
         transform.DOMove(desiredPos.transform.position, time).OnComplete(() =>
         {
-            soldierAnim.SetBool("CanWalk", false);
+            witchAnim.SetBool("CanAttack" , true);
+            portalEffect.SetActive(true);
         });
-        transform.DORotate(new Vector3(0f, 90f, 0f), time);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Portal"))
         {
             Protect();
+            StartCoroutine(ClosePortal(other));
         }
+    }
+
+    private IEnumerator ClosePortal(Collider other)
+    {
+        yield return new WaitForSeconds(1.5f);
+        other.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

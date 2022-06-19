@@ -13,11 +13,15 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../RealPlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/WarriorBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../RealPlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Character.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/CollisionTriggers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Stack/Assets/LevelScenes/Stack/Stack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/unity/Unity Projects/new/Assets/scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/FinalPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/WitcherBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/HealerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/WallLocater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
@@ -34,10 +38,14 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platforms/Scripts/PlatformMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayerRotation.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/RaycastManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/WarriorBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/FollowPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/WitcherBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/FinalPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Characters/Scripts/HealerBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2Ai8ToYaasJtZBBQhDlCftovNkD" />
